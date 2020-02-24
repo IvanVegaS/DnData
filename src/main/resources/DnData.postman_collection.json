@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "4c37b330-3726-4e36-9796-e37312a5864a",
+		"name": "DnData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetRace",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dndata/races/5e536d119053e45da2444bbe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dndata",
+						"races",
+						"5e536d119053e45da2444bbe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRaces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dndata/races?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dndata",
+						"races"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "humanoid",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostRace",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"type\": \"Humanoid\",\r\n\t\"name\": \"Elf\",\r\n\t\"modifiers\": [{\r\n\t\t\"ability\": \"Dexterity\",\r\n\t\t\"value\": 2\r\n\t}],\r\n\t\"descriptions\": [{\r\n\t\t\"title\": \"Main\",\r\n\t\t\"text\": \"Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry, and the good things of the world.\"\r\n\t}, {\r\n\t\t\"title\": \"Slender and Graceful\",\r\n\t\t\"text\": \"With their unearthly grace and fine features, elves appear hauntingly beautiful to humans and members of many other races. They are slightly shorter than humans on average, ranging from well under 5 feet tall to just over 6 feet. They are slenderer than humans, weighing only 100 to 145 pounds. Males and females are about the same height, and males are only marginally heavier than females. \\nElves’ coloration encompasses the normal human range and also includes skin in shades of copper, bronze, and almost bluish-white, hair of green or blue, and eyes like pools of liquid gold or silver. Elves have no facial and little body hair. They favor elegant clothing in bright colors, and they enjoy simple yet lovely jewelry.\"\r\n\t}, {\r\n\t\t\"title\": \"A Timeless Perspective\",\r\n\t\t\"text\": \"Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply. They are more often amused than excited, and more likely to be curious than greedy. They tend to remain aloof and unfazed by petty happenstance. When pursuing a goal, however, whether adventuring on a mission or learning a new skill or art, elves can be focused and relentless. They are slow to make friends and enemies, and even slower to forget them. They reply to petty insults with disdain and to serious insults with vengeance.\\n Like the branches of a young tree, elves are flexible in the face of danger. They trust in diplomacy and compromise to resolve differences before they escalate to violence. They have been known to retreat from intrusions into their woodland homes, confident that they can simply wait the invaders out. But when the need arises, elves reveal a stern martial side, demonstrating skill with sword, bow, and strategy.\"\r\n\t}, {\r\n\t\t\"title\": \"Hidden Woodland Realms\",\r\n\t\t\"text\": \"Most elves dwell in small forest villages hidden among the trees. Elves hunt game, gather food, and grow vegetables, and their skill and magic allow them to support themselves without the need for clearing and plowing land. They are talented artisans, crafting finely worked clothes and art objects. Their contact with outsiders is usually limited, though a few elves make a good living by trading crafted items for metals (which they have no interest in mining).\\n Elves encountered outside their own lands are commonly traveling minstrels, artists, or sages. Human nobles compete for the services of elf instructors to teach swordplay or magic to their children.\"\r\n\t}, {\r\n\t\t\"title\": \"Exploration and Adventure\",\r\n\t\t\"text\": \"Elves take up adventuring out of wanderlust. Since they are so long-lived, they can enjoy centuries of exploration and discovery. They dislike the pace of human society, which is regimented from day to day but constantly changing over decades, so they find careers that let them travel freely and set their own pace. Elves also enjoy exercising their martial prowess or gaining greater magical power, and adventuring allows them to do so. Some might join with rebels fighting against oppression, and others might become champions of moral causes.\"\r\n\t}, {\r\n\t\t\"title\": \"Elf Names\",\r\n\t\t\"text\": \"Elves are considered children until they declare themselves adults, some time after the hundredth birthday, and before this period they are called by child names.\\n On declaring adulthood, an elf selects an adult name, although those who knew him or her as a youngster might continue to use the child name. Each elf’s adult name is a unique creation, though it might reflect the names of respected individuals or other family members. Little distinction exists between male names and female names; the groupings here reflect only general tendencies. In addition, every elf bears a family name, typically a combination of other Elvish words. Some elves traveling among humans translate their family names into Common, but others retain the Elvish version.\"\r\n\t}],\r\n\t\"features\": [{\r\n\t\t\"name\": \"Darkvision\",\r\n\t\t\"description\": \"Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.\"\r\n\t}, {\r\n\t\t\"name\": \"Keen Senses\",\r\n\t\t\"description\": \"You have proficiency in the Perception skill\"\r\n\t}, {\r\n\t\t\"name\": \"Fey Ancestry\",\r\n\t\t\"description\": \"You have advantage on saving throws against being charmed, and magic can’t put you to sleep.\"\r\n\t}, {\r\n\t\t\"name\": \"Trance\",\r\n\t\t\"description\": \"Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.\"\r\n\t}],\r\n\t\"age\": \"Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.\",\r\n\t\"size\": {\r\n\t\t\"value\" : \"Medium\",\r\n\t\t\"description\" : \"Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.\"\r\n\t},\r\n\t\"speed\": \"Your base walking speed is 30 feet.\",\r\n\t\"alignment\": \"Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not. The drow are an exception; their exile into the Underdark has made them vicious and dangerous. Drow are more often evil than not.\",\r\n\t\"languages\": [\"Common\", \"Elvish\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/dndata/races",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dndata",
+						"races"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutRace",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subraces\": [\"5e5338b5aba6cf745d06cd3e\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/dndata/races/5e536a912e098409bc9d16f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dndata",
+						"races",
+						"5e536a912e098409bc9d16f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRace",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dndata/races/5e536d119053e45da2444bbe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dndata",
+						"races",
+						"5e536d119053e45da2444bbe"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
